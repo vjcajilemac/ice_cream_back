@@ -18,11 +18,13 @@ class IceCreamController extends Controller
     {
         $icecreams = IceCreamModel::all();
         //
-        return response([
+
+        return view('admin/icecream/index', ['icecreams' => $icecreams]);
+        /*return response([
 			'success' => true,
 			'message' => __('Datos encontrados'),
 			'data'    => new IceCreamCollection($icecreams),
-		]);
+		]);*/
     }
 
     /**
